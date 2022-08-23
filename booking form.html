@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Airline Booking Form
+	</title>
+	<link rel="stylesheet" href="bookingform.css">
+</head>
+
+<script>
+	function passvalues()
+	{
+		var fname=document.getElementById("fname").value;
+		localStorage.setItem("textvalue",fname); 
+		var lname=document.getElementById("lname").value;
+		localStorage.setItem("textvalue1",lname);
+		var age=document.getElementById("age").value;
+		localStorage.setItem("textvalue2",age);
+		var email=document.getElementById("email").value;
+		localStorage.setItem("textvalue3",email);
+		var phoneno=document.getElementById("phone_no").value;
+		localStorage.setItem("textvalue4",phoneno);
+		
+		var rates = document.getElementsByName('recommed');
+		var rate_value;
+		for(var i = 0; i < rates.length; i++){
+    	if(rates[i].checked){
+        	rate_value = rates[i].value;
+    	}
+		}
+		
+		localStorage.setItem("gender",rate_value); 
+		
+		return false;
+	}
+</script>
+
+<body>
+	<h1 style="font-family: 'Courier New', Courier, monospace;">Airline Booking Form</h1>
+
+	<!-- Create Form -->
+	<form id="form" action="confirmation.html">
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				First Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text" maxlength="20" required
+				id="fname"
+				placeholder="Enter your first name" />
+		</div>
+
+        <div class="form-control">
+			<label for="name" id="label-name">
+				Last Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text" maxlength="20" required
+				id="lname"
+				placeholder="Enter your last name" />
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="label-age">
+				Age
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="number" maxlength="3" min="18" required
+				id="age"
+				placeholder="Enter your age" />
+		</div>
+
+
+		<div class="form-control">
+			<label>
+				Gender
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio" required
+					id="recommed-1"
+					name="recommed"
+					value="Male"
+					
+					>Male</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" required
+					id="recommed-2"
+					name="recommed"
+					value="Female"
+					
+					>Female</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio" required
+					id="recommed-3"
+					name="recommed"
+					value="Other"
+					
+					>Other</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email" required
+				id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+				placeholder="Enter your email" />
+		</div>
+
+
+		<div class="form-control">
+			<label for="phoneno" id="phoneno">
+				Phone Number
+			</label>
+
+			<!-- Input Type Phone no-->
+			<input type="number" maxlength="10" required
+				id="phone_no"
+				placeholder="Enter your phone number" />
+		</div>
+
+		<button class="button button1" type="submit" value="submit" onclick="passvalues()"  id="submit-btn">
+			BOOK TICKET
+		</button>
+		<!-- <button class="button button1" type="submit" value="submit"   id="submit-btn">
+			Add Passenger
+		</button> -->
+
+		
+	</form>
+	
+	<script src="form validation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:wght@500;600&family=Inconsolata:wght@300&family=Poppins:ital,wght@0,200;1,100&family=Quicksand&family=Source+Code+Pro:ital@1&family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:wght@500;600&family=Exo+2:wght@600&family=Inconsolata:wght@300;900&family=Poppins:ital,wght@0,200;1,100&family=Quicksand&family=Source+Code+Pro:ital@1&family=Work+Sans:wght@300&display=swap');
+
+body {
+    background-color: black;
+    color: #514B64;
+    min-height: 100vh;
+  }
+
+h2 {
+
+  color:white;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Cinzel', serif;
+  font-family: 'EB Garamond', serif;
+  font-family: 'Exo 2', sans-serif;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+
+p {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-family: 'EB Garamond', serif;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#card-row {
+    background-color: pink;
+}

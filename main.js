@@ -13,7 +13,7 @@ function display_cards(flight_det){
         content +=  `
         <div class="col">
         <div class="card" >
-        <img src="/Project 1/images/${count+1}.jpg" width="60" height="100"  class="card-img-top"
+        <img src="/images/${count+1}.jpg" width="60" height="100"  class="card-img-top"
         alt="Hollywood Sign on The Hill" />
             <div class="card-body">
             

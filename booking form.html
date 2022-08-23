@@ -35,8 +35,62 @@
 		
 		localStorage.setItem("gender",rate_value); 
 		
+		var count = 1;
+		localStorage.setItem("count", count);
 		return false;
 	}
+
+	function text()
+	{
+    // localStorage.setItem("flag",1);
+    document.getElementById("addpass").style.display = "block";
+    document.getElementById("addpass1").style.display = "block";
+    document.getElementById("addpass2").style.display = "block";
+    document.getElementById("addpass3").style.display = "block";
+    }
+
+	function secondpassengerstorage(){
+
+		var fname=document.getElementById("fname").value;
+		localStorage.setItem("textvalue",fname); 
+		var lname=document.getElementById("lname").value;
+		localStorage.setItem("textvalue1",lname);
+		var age=document.getElementById("age").value;
+		localStorage.setItem("textvalue2",age);
+		
+		var rates = document.getElementsByName('recommed');
+		var rate_value;
+		for(var i = 0; i < rates.length; i++){
+    	if(rates[i].checked){
+        	rate_value = rates[i].value;
+    	}
+		}
+		
+		localStorage.setItem("gender",rate_value);
+
+
+		var fname2=document.getElementById("fname2").value;
+		localStorage.setItem("textvalue6",fname2); 
+		var lname2=document.getElementById("lname2").value;
+		localStorage.setItem("textvalue7",lname2);
+		var age2=document.getElementById("age2").value;
+		localStorage.setItem("textvalue8",age2);
+		
+		var rates2 = document.getElementsByName('recommed2');
+		var rate_value2;
+		for(var i = 0; i < rates2.length; i++){
+    	if(rates2[i].checked){
+        	rate_value2 = rates2[i].value;
+    	}
+		}
+		
+		localStorage.setItem("gender2",rate_value2); 
+		
+		var count = 2;
+		localStorage.setItem("count", count);
+		return false;
+	}
+
 </script>
 
 <body>
@@ -138,12 +192,94 @@
 		<button class="button button1" type="submit" value="submit" onclick="passvalues()"  id="submit-btn">
 			BOOK TICKET
 		</button>
-		<!-- <button class="button button1" type="submit" value="submit"   id="submit-btn">
-			Add Passenger
-		</button> -->
+		<a class="button button1" href="#" onclick="window.text()">Add Passenger</a>
 
-		
+
+
 	</form>
+
+		<!--Add Passenger-->
+		<form id="form" action="confirmation.html" >
+
+			<!-- Details -->
+			<div class="input-group">
+				<div class="form-control" id="addpass" style="display: none;">
+					<label for="name" id="label-name">
+						First Name
+					</label>
+		
+					<!-- Input Type Text -->
+					<input type="text" maxlength="20" required
+						id="fname2"
+						placeholder="Enter your first name" />
+				</div>
+			</div>
+
+			<div class="input-group">
+				<div class="form-control" id="addpass1" style="display: none;">
+					<label for="name" id="label-name">
+						Last Name
+					</label>
+		
+					<!-- Input Type Text -->
+					<input type="text" maxlength="20" required
+						id="lname2"
+						placeholder="Enter your last name" />
+				</div>
+			</div>
+
+			<div class="input-group">
+				<div class="form-control" id="addpass2" style="display: none;">
+					<label for="age" id="label-age">
+						Age
+					</label>
+		
+					<!-- Input Type Text -->
+					<input type="number" maxlength="3" min="18" required
+						id="age2"
+						placeholder="Enter your age" />
+				</div>
+			</div>
+
+			<div class="input-group">
+				<div class="form-control" id="addpass3" style="display: none;">
+					<label>
+						Gender
+					</label>
+		
+					<!-- Input Type Radio Button -->
+					<label for="recommed-1">
+						<input type="radio" required
+							id="recommed-1"
+							name="recommed2"
+							value="Male"
+							
+							>Male</input>
+					</label>
+					<label for="recommed-2">
+						<input type="radio" required
+							id="recommed-2"
+							name="recommed2"
+							value="Female"
+							
+							>Female</input>
+					</label>
+					<label for="recommed-3">
+						<input type="radio" required
+							id="recommed-3"
+							name="recommed2"
+							value="Other"
+							
+							>Other</input>
+					</label>
+				</div>
+			</div>
+			<!-- <a class="button button1" href="#" onclick="window.text()">Add Passenger</a> -->
+			<button class="button button1" type="submit" onclick="secondpassengerstorage()">Submit</button>
+
+			
+		
+		</form>
 	
 	<script src="form validation.js"></script>
 

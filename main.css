@@ -2,6 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:wght@500;600&family=Inconsolata:wght@300&family=Poppins:ital,wght@0,200;1,100&family=Quicksand&family=Source+Code+Pro:ital@1&family=Work+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:wght@500;600&family=Exo+2:wght@600&family=Inconsolata:wght@300;900&family=Poppins:ital,wght@0,200;1,100&family=Quicksand&family=Source+Code+Pro:ital@1&family=Work+Sans:wght@300&display=swap');
 
+.container2 {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+
+.container2 span {
+  display: block;
+}
+
+.text1 {
+  font-family: 'Work Sans', serif;
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: text 5s 1;
+}
+
+@keyframes text {
+  0% {
+    color: black;
+    margin-bottom: -40px;
+  }
+
+  30% {
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+}
+
 body {
   background-color: black;
   color: #514B64;
@@ -23,8 +65,15 @@ h2 {
 }
 
 .responsive {
+  background-image: url("airplane.jpg");
+  background-size: cover;
+  background-position: 30%;
   width: 100%;
-  height: auto;
+  height: 90vh;
+}
+
+h1 {
+  text-align: center;
 }
 
 p {

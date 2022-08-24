@@ -28,11 +28,10 @@
 		var rates = document.getElementsByName('recommed');
 		var rate_value;
 		for(var i = 0; i < rates.length; i++){
-    	if(rates[i].checked){
-        	rate_value = rates[i].value;
-    	}
+    		if(rates[i].checked){
+        		rate_value = rates[i].value;
+    		}
 		}
-		
 		localStorage.setItem("gender",rate_value); 
 		
 		var count = 1;
@@ -40,16 +39,12 @@
 		return false;
 	}
 
-	function text()
-	{
-    
-	document.getElementById("form2").style.display = "block";
-    
+	function text(){
+    	document.getElementById("form2").style.display = "block";
     }
 
 	function secondpassengerstorage(){
 
-		
 		var fname=document.getElementById("fname").value;
 		localStorage.setItem("textvalue",fname); 
 		var lname=document.getElementById("lname").value;
@@ -60,11 +55,10 @@
 		var rates = document.getElementsByName('recommed');
 		var rate_value;
 		for(var i = 0; i < rates.length; i++){
-    	if(rates[i].checked){
-        	rate_value = rates[i].value;
-    	}
+    		if(rates[i].checked){
+        		rate_value = rates[i].value;
+    		}
 		}
-		
 		localStorage.setItem("gender",rate_value);
 
 
@@ -78,11 +72,10 @@
 		var rates2 = document.getElementsByName('recommed2');
 		var rate_value2;
 		for(var i = 0; i < rates2.length; i++){
-    	if(rates2[i].checked){
-        	rate_value2 = rates2[i].value;
-    	}
+    		if(rates2[i].checked){
+        		rate_value2 = rates2[i].value;
+    		}
 		}
-		
 		localStorage.setItem("gender2",rate_value2); 
 		
 		var count = 2;
@@ -95,16 +88,13 @@
 <body>
 	<h1 style="font-family: 'Courier New', Courier, monospace;">Airline Booking Form</h1>
 
-	<!-- Create Form -->
+	<!-- Form for first passenger -->
 	<form id="form" action="confirmation.html">
-
-		<!-- Details -->
+		
 		<div class="form-control">
 			<label for="name" id="label-name">
 				First Name
 			</label>
-
-			<!-- Input Type Text -->
 			<input type="text" maxlength="20" required
 				id="fname"
 				placeholder="Enter your first name" />
@@ -114,8 +104,6 @@
 			<label for="name" id="label-name">
 				Last Name
 			</label>
-
-			<!-- Input Type Text -->
 			<input type="text" maxlength="20" required
 				id="lname"
 				placeholder="Enter your last name" />
@@ -125,8 +113,6 @@
 			<label for="age" id="label-age">
 				Age
 			</label>
-
-			<!-- Input Type Text -->
 			<input type="number" maxlength="3" min="18" required
 				id="age"
 				placeholder="Enter your age" />
@@ -137,31 +123,23 @@
 			<label>
 				Gender
 			</label>
-
-			<!-- Input Type Radio Button -->
 			<label for="recommed-1">
 				<input type="radio" required
 					id="recommed-1"
 					name="recommed"
-					value="Male"
-					
-					>Male</input>
+					value="Male">Male</input>
 			</label>
 			<label for="recommed-2">
 				<input type="radio" required
 					id="recommed-2"
 					name="recommed"
-					value="Female"
-					
-					>Female</input>
+					value="Female">Female</input>
 			</label>
 			<label for="recommed-3">
 				<input type="radio" required
 					id="recommed-3"
 					name="recommed"
-					value="Other"
-					
-					>Other</input>
+					value="Other">Other</input>
 			</label>
 		</div>
 
@@ -169,20 +147,15 @@
 			<label for="email" id="label-email">
 				Email
 			</label>
-
-			<!-- Input Type Email-->
 			<input type="email" required
 				id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
 				placeholder="Enter your email" />
 		</div>
 
-
 		<div class="form-control">
 			<label for="phoneno" id="phoneno">
 				Phone Number
 			</label>
-
-			<!-- Input Type Phone no-->
 			<input type="number" maxlength="10" required
 				id="phone_no"
 				placeholder="Enter your phone number" />
@@ -194,20 +167,16 @@
 		<a class="button button1" href="#" onclick="window.text()">Add Passenger</a>
 
 
-
+	<!--Form for second passenger-->
 	</form>
 		<div class="form2" id="form2">
-		<!--Add Passenger-->
 		<form id="form" action="confirmation.html" >
 
-			<!-- Details -->
 			<div class="input-group">
 				<div class="form-control" >
 					<label for="name" id="label-name">
 						First Name
 					</label>
-		
-					<!-- Input Type Text -->
 					<input type="text" maxlength="20" required
 						id="fname2"
 						placeholder="Enter your first name" />
@@ -219,8 +188,6 @@
 					<label for="name" id="label-name">
 						Last Name
 					</label>
-		
-					<!-- Input Type Text -->
 					<input type="text" maxlength="20" required
 						id="lname2"
 						placeholder="Enter your last name" />
@@ -232,8 +199,6 @@
 					<label for="age" id="label-age">
 						Age
 					</label>
-		
-					<!-- Input Type Text -->
 					<input type="number" maxlength="3" min="18" required
 						id="age2"
 						placeholder="Enter your age" />
@@ -246,41 +211,30 @@
 						Gender
 					</label>
 		
-					<!-- Input Type Radio Button -->
 					<label for="recommed-1">
 						<input type="radio" required
 							id="recommed-1"
 							name="recommed2"
-							value="Male"
-							
-							>Male</input>
+							value="Male">Male</input>
 					</label>
 					<label for="recommed-2">
 						<input type="radio" required
 							id="recommed-2"
 							name="recommed2"
-							value="Female"
-							
-							>Female</input>
+							value="Female">Female</input>
 					</label>
 					<label for="recommed-3">
 						<input type="radio" required
 							id="recommed-3"
 							name="recommed2"
-							value="Other"
-							
-							>Other</input>
+							value="Other">Other</input>
 					</label>
 				</div>
 			</div>
-			<!-- <a class="button button1" href="#" onclick="window.text()">Add Passenger</a> -->
-			<button class="button button1" type="submit"  id="addpass4"onclick="secondpassengerstorage()">BOOK TICKET</button>
-
 			
-		
-		</form>
+			<button class="button button1" type="submit"  id="addpass4"onclick="secondpassengerstorage()">BOOK TICKET</button>
 		</div>
-	<script src="form validation.js"></script>
-
+	</form>
+<script src="form validation.js"></script>
 </body>
 </html>

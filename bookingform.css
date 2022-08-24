@@ -1,79 +1,77 @@
-/* Styling the Body element i.e. Color,
-		Font, Alignment */
-		body {
-			/*background-color: black;*/
-            background-image: url('flightbg.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;  
-            background-size: cover;
-			font-family: Verdana;
-			text-align: center;
-		}
 
-		/* Styling the Form (Color, Padding, Shadow) */
-		form{
- 
-			background-color: #fff;
-			max-width: 500px;
-			margin: 50px auto;
-			padding: 30px 20px;
-			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-		}
-		.form2{
-			display: none;
-		}
-		/* Styling form-control Class */
-		.form-control {
-			text-align: left;
-			margin-bottom: 25px;
-		}
+body {
+	background-image: url('flightbg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+	font-family: Verdana;
+	text-align: center;
+}
 
-		/* Styling form-control Label */
-		.form-control label {
-			display: block;
-			margin-bottom: 10px;
-		}
+/* Styling the Form (Color, Padding, Shadow) */
+form {
+ 	background-color: #fff;
+	max-width: 500px;
+	margin: 50px auto;
+	padding: 30px 20px;
+	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+		
+.form2 {
+	display: none;
+}
 
-		/* Styling form-control input*/
-		.form-control input{
-			border: 1px solid #777;
-			border-radius: 2px;
-			font-family: inherit;
-			padding: 10px;
-			display: block;
-			width: 95%;
-		}
+/* Styling form-control Class */
+.form-control {
+	text-align: left;
+	margin-bottom: 25px;
+}
 
-		/* Styling form-control Radio
-		button */
-		.form-control input[type="radio"] {
-			display: inline-block;
-			width: auto;
-		}
+/* Styling form-control Label */
+.form-control label {
+	display: block;
+	margin-bottom: 10px;
+}
 
-		.button {
-  			border: none;
-			background-color: black;
-			border: 1px solid #777;
-  			color: white;
-			padding: 16px 32px;
-			text-align: center;
-			font-family: verdana;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
-			margin: 4px 2px;
-			transition-duration: 0.4s;
-			cursor: pointer;
-			}
+/* Styling form-control input*/
+.form-control input {
+	border: 1px solid #777;
+	border-radius: 2px;
+	font-family: inherit;
+	padding: 10px;
+	display: block;
+	width: 95%;
+}
 
-			.button1 {
-			background-color: white;
-			color: black;
-			border: 2px solid grey;
-			}
+/* Styling form-control Radio button */
+.form-control input[type="radio"] {
+	display: inline-block;
+	width: auto;
+}
 
-			.button1:hover {
-			background-color: black;
-			color: white;
-			}
+.button {
+  	border: none;
+	background-color: black;
+	border: 1px solid #777;
+  	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	font-family: verdana;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.button1 {
+	background-color: white;
+	color: black;
+	border: 2px solid grey;
+}
+
+.button1:hover {
+	background-color: black;
+	color: white;
+}

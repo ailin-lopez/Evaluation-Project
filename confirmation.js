@@ -11,9 +11,7 @@ let v3=localStorage.getItem("textvalue8");
 let v4=localStorage.getItem("gender2");
 
 let count = localStorage.getItem("count");
-
 flight_id-=1;
-
 
 console.log(flight_id);
 console.log(val);
@@ -31,19 +29,14 @@ fetch('flights.json')
 .then(response => response.json())
 .then(data => display_value(data));
 
-
-
 let content='';
 
 function display_value(data)
 {
-    if(count === "1")
-    {
+    if(count === "1") {
         departure=new Date(data[flight_id].departTime);
         arrival=new Date(data[flight_id].ArrivalTime);
-
         content +=  `
-        
         
         <div class="row">
             <div class="column">
@@ -72,15 +65,13 @@ function display_value(data)
         </div>
 
     `
-    document.querySelector("#card-collection").innerHTML = content;
+        document.querySelector("#card-collection").innerHTML = content;
     }
 
-    else{
+    else {
         departure=new Date(data[flight_id].departTime);
         arrival=new Date(data[flight_id].ArrivalTime);
-
         content +=  `
-        
         
         <div class="row">
             <div class="column">
@@ -113,7 +104,7 @@ function display_value(data)
                     <h4>Destination: <span> ${data[flight_id].destination}</span></h4>
                     <h4>Departure: <span>${departure.toUTCString()} </span></h4>
                     <h4>Arrival: <span>${arrival.toUTCString()} </span></h4>
-                    <h4>Price: <span> &#8377;${data[flight_id].price}</h4>
+                    <h4>Price: <span> &#8377;${data[flight_id].price * 2}</h4>
                 </div>
             </div>
         </div>

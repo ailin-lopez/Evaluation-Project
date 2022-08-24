@@ -7,76 +7,72 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url('confirmation_background.jpg');
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    font-family: Verdana;
-			
-  }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('confirmation_background.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  font-family: Verdana;
+}
 
-  h2{
-    
-    font-size:40px;
-    color: white;
-    font-weight: 600;
-    font-family: 'Cinzel', serif;
-    font-family: 'EB Garamond', serif;
-    font-family: 'Exo 2', sans-serif;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Source Code Pro', monospace;
-    font-family: 'Work Sans', sans-serif;
-    
-   
-  }
+h2 {
+  font-size:40px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Cinzel', serif;
+  font-family: 'EB Garamond', serif;
+  font-family: 'Exo 2', sans-serif;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Work Sans', sans-serif;
+}
 
-  h4{
-    font-family: 'Cinzel', serif;
-    font-family: 'EB Garamond', serif;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Source Code Pro', monospace;
-    font-family: 'Work Sans', sans-serif;
-  }
+h4 {
+  font-family: 'Cinzel', serif;
+  font-family: 'EB Garamond', serif;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Work Sans', sans-serif;
+}
   
-  /* Float four columns side by side */
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+  
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+  
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+/* Responsive columns */
+@media screen and (max-width: 600px) {
   .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
+}
   
-  /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-    border-radius: 15px;
+/* Style the cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 15px;
 }
 
 .button {
@@ -96,15 +92,14 @@
   border-radius: 15px;
   }
 
-  .button1 {
+.button1 {
   background-color: white;
   color: black;
   border: 2px solid grey;
-  }
+}
 
-  .button1:hover {
+.button1:hover {
   background-color: black;
   color: white;
-  }
+}
 
-/*.flex-container{display: flex;justify-content: space-around;background:#fff;}*/

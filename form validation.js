@@ -19,9 +19,6 @@ var phone_regex = /^[0-9]{10}$/;
 submitBtn.disabled = "true";
 submitBtn2.disabled = "true";
 
-
-
-
 let inputValidator = {
     "firstn": false,
     "lastn": false,
@@ -33,7 +30,6 @@ let inputValidator = {
     "ageperson2": false
 };
 
-
 firstName.addEventListener('input', validateFirstName)
 lastName.addEventListener('input', validateLastName)
 age.addEventListener('input', validateAge)
@@ -43,179 +39,144 @@ firstName2.addEventListener('input', validateFirstName2)
 lastName2.addEventListener('input', validateLastName2)
 age2.addEventListener('input', validateAge2)
 
-
-function buttonRelease(){
-
-console.log(inputValidator);
-
- var result = inputValidator.firstn === true && inputValidator.lastn === true && inputValidator.ageperson === true && inputValidator.emailid === true && inputValidator.phonenumber === true;
- console.log(result);
-
- var result2 = inputValidator.firstn2 === true && inputValidator.lastn2 === true && inputValidator.ageperson2 === true;
- console.log(result2);
-
-if(result){
-submitBtn.removeAttribute("disabled");
-console.log("Submit button active");
-}
-   
-else{
-submitBtn.disabled = "true";
-console.log("Submit button not active");
-}
-
-if(result2){
-submitBtn2.removeAttribute("disabled");
-console.log("Submit button active");
-}
-       
-else{
-submitBtn2.disabled = "true";
-console.log("Submit button not active");
-}
+function buttonRelease() {
+    console.log(inputValidator);
+    var result = inputValidator.firstn === true && inputValidator.lastn === true && inputValidator.ageperson === true && inputValidator.emailid === true && inputValidator.phonenumber === true;
+    console.log(result);
+    var result2 = inputValidator.firstn2 === true && inputValidator.lastn2 === true && inputValidator.ageperson2 === true;
+    console.log(result2);
+    
+    if(result) {
+        submitBtn.removeAttribute("disabled");
+        console.log("Submit button active");
+    }
+   else {
+        submitBtn.disabled = "true";
+        console.log("Submit button not active");
+    }
+    if(result2){
+        submitBtn2.removeAttribute("disabled");
+        console.log("Submit button active");
+    }
+    else{
+        submitBtn2.disabled = "true";
+        console.log("Submit button not active");
+    }
 }
 
 function validateFirstName() {
-
-console.log(firstName.value);
-
-if (name_regex.test(firstName.value)) {
-valid(firstName);
-inputValidator.firstn = true;
-buttonRelease();
-}
-else {
-invalid(firstName);
-inputValidator.firstn = false;
-}
+    console.log(firstName.value);
+    if (name_regex.test(firstName.value)) {
+        valid(firstName);
+        inputValidator.firstn = true;
+        buttonRelease();
+    }
+    else {
+        invalid(firstName);
+        inputValidator.firstn = false;
+    }
 }
 
 function validateLastName() {
-
     console.log(lastName.value);
-
     if (name_regex.test(lastName.value)) {
-    valid(lastName);
-    inputValidator.lastn = true;
-    buttonRelease();
+        valid(lastName);
+        inputValidator.lastn = true;
+        buttonRelease();
     }
     else {
-    invalid(lastName);
-    inputValidator.lastn = false;
+        invalid(lastName);
+        inputValidator.lastn = false;
     }
-
 }
 
 function validateAge() {
-
- console.log(age.value);
-
- if (age_regex.test(age.value)) {
- valid(age);
- inputValidator.ageperson = true;
- buttonRelease();
-
- }
- else {
- invalid(age);
- inputValidator.ageperson = false;
- buttonRelease();
-}
-
+    console.log(age.value);
+    if (age_regex.test(age.value)) {
+        valid(age);
+        inputValidator.ageperson = true;
+        buttonRelease();
+    }
+    else {
+        invalid(age);
+        inputValidator.ageperson = false;
+        buttonRelease();
+    }
 }
 
 
 function validateFirstName2() {
-
     console.log(firstName2.value);
-    
     if (name_regex.test(firstName2.value)) {
-    valid(firstName2);
-    inputValidator.firstn2 = true;
-    buttonRelease();
+        valid(firstName2);
+        inputValidator.firstn2 = true;
+        buttonRelease();
     }
     else {
-    invalid(firstName2);
-    inputValidator.firstn2 = false;
+        invalid(firstName2);
+        inputValidator.firstn2 = false;
     }
-    }
+}
     
-    function validateLastName2() {
-    
-        console.log(lastName2.value);
-    
-        if (name_regex.test(lastName2.value)) {
+function validateLastName2() {
+    console.log(lastName2.value);
+    if (name_regex.test(lastName2.value)) {
         valid(lastName2);
         inputValidator.lastn2 = true;
         buttonRelease();
-        }
-        else {
+    }
+    else {
         invalid(lastName2);
         inputValidator.lastn2 = false;
-        }
-    
     }
+}
     
-    function validateAge2() {
-    
-     console.log(age2.value);
-    
-     if (age_regex.test(age2.value)) {
-     valid(age2);
-     inputValidator.ageperson2 = true;
-     buttonRelease();
-    
-     }
-     else {
-     invalid(age2);
-     inputValidator.ageperson2 = false;
-     buttonRelease();
+function validateAge2() {
+    console.log(age2.value);
+    if (age_regex.test(age2.value)) {
+        valid(age2);
+        inputValidator.ageperson2 = true;
+        buttonRelease();
     }
-    
+    else {
+        invalid(age2);
+        inputValidator.ageperson2 = false;
+        buttonRelease();
     }
+}
 
 function validateEmail() {
-
- console.log(email.value);
-
- if (email_regex.test(email.value)) {
- valid(email);
- inputValidator.emailid = true;
- buttonRelease();
- 
- }
- else {
-
-    invalid(email);
-    inputValidator.emailid = false;
- }
+    console.log(email.value);
+    if (email_regex.test(email.value)) {
+        valid(email);
+        inputValidator.emailid = true;
+        buttonRelease();
+    }
+    else {
+        invalid(email);
+        inputValidator.emailid = false;
+    }
 }
 
 function validatePhoneNo() {
-
-console.log(phoneno.value);
-
- if (phone_regex.test(phoneno.value)) {
- valid(phoneno);
- inputValidator.phonenumber = true;
- buttonRelease();
- 
- }
- else {
-
- invalid(phoneno);
- inputValidator.phonenumber = false;
- }
+    console.log(phoneno.value);
+    if (phone_regex.test(phoneno.value)) {
+        valid(phoneno);
+        inputValidator.phonenumber = true;
+        buttonRelease();
+    }
+    else {
+    invalid(phoneno);
+    inputValidator.phonenumber = false;
+    }
 }
 
 function valid(element){
-
- element.style.borderColor = "green";
- element.style.borderWidth = "thin thick";
-
+    element.style.borderColor = "green";
+    element.style.borderWidth = "thin thick";
 }
 
 function invalid(element){
- element.style.borderColor = "red";
- element.style.borderWidth = "thin thick";
+    element.style.borderColor = "red";
+    element.style.borderWidth = "thin thick";
 }

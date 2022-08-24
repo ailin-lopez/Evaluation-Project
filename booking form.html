@@ -42,15 +42,14 @@
 
 	function text()
 	{
-    // localStorage.setItem("flag",1);
-    document.getElementById("addpass").style.display = "block";
-    document.getElementById("addpass1").style.display = "block";
-    document.getElementById("addpass2").style.display = "block";
-    document.getElementById("addpass3").style.display = "block";
+    
+	document.getElementById("form2").style.display = "block";
+    
     }
 
 	function secondpassengerstorage(){
 
+		
 		var fname=document.getElementById("fname").value;
 		localStorage.setItem("textvalue",fname); 
 		var lname=document.getElementById("lname").value;
@@ -197,13 +196,13 @@
 
 
 	</form>
-
+		<div class="form2" id="form2">
 		<!--Add Passenger-->
 		<form id="form" action="confirmation.html" >
 
 			<!-- Details -->
 			<div class="input-group">
-				<div class="form-control" id="addpass" style="display: none;">
+				<div class="form-control" >
 					<label for="name" id="label-name">
 						First Name
 					</label>
@@ -216,7 +215,7 @@
 			</div>
 
 			<div class="input-group">
-				<div class="form-control" id="addpass1" style="display: none;">
+				<div class="form-control" >
 					<label for="name" id="label-name">
 						Last Name
 					</label>
@@ -229,7 +228,7 @@
 			</div>
 
 			<div class="input-group">
-				<div class="form-control" id="addpass2" style="display: none;">
+				<div class="form-control" >
 					<label for="age" id="label-age">
 						Age
 					</label>
@@ -242,7 +241,7 @@
 			</div>
 
 			<div class="input-group">
-				<div class="form-control" id="addpass3" style="display: none;">
+				<div class="form-control" >
 					<label>
 						Gender
 					</label>
@@ -275,12 +274,12 @@
 				</div>
 			</div>
 			<!-- <a class="button button1" href="#" onclick="window.text()">Add Passenger</a> -->
-			<button class="button button1" type="submit" onclick="secondpassengerstorage()">Submit</button>
+			<button class="button button1" type="submit"  id="addpass4"onclick="secondpassengerstorage()">BOOK TICKET</button>
 
 			
 		
 		</form>
-	
+		</div>
 	<script src="form validation.js"></script>
 
 </body>

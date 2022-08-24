@@ -1,3 +1,4 @@
+<!--Booking Form-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,8 @@
 </head>
 
 <script>
-	function passvalues()
+	
+	function passvalues() /* Stores the values of 1st passenger in local storage. */
 	{
 		var fname=document.getElementById("fname").value;
 		localStorage.setItem("textvalue",fname); 
@@ -43,8 +45,8 @@
     	document.getElementById("form2").style.display = "block";
     }
 
-	function secondpassengerstorage(){
-
+	function secondpassengerstorage() /* Stores the values of 2nd passenger in local storage. */
+	{
 		var fname=document.getElementById("fname").value;
 		localStorage.setItem("textvalue",fname); 
 		var lname=document.getElementById("lname").value;

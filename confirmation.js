@@ -1,3 +1,5 @@
+/* Java Script file to get values from local storage and to display them on the confirmation page. */
+
 let flight_id=localStorage.getItem("flightid");
 let val=localStorage.getItem("textvalue");
 let val1=localStorage.getItem("textvalue1");

@@ -1,4 +1,5 @@
-function display_cards(flight_det){
+/* Java Script code that populates details dynamically from the JSON file provided with the flights JSON data*/
+function display_cards(flight_det) {
     const number_of_flights = Object.keys(flight_det).length; //number of flights in the json
     
     let content = '';
@@ -44,6 +45,6 @@ fetch('flights.json')
 .then(response => response.json())
 .then(data => display_cards(data));
 
-function get_flight_details(flightid){
+function get_flight_details(flightid) {
     localStorage.setItem("flightid",flightid);
 }

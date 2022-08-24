@@ -1,10 +1,11 @@
+/* Java Script file to validate the forms. */
+
 var firstName = document.getElementById("fname");
 var lastName = document.getElementById("lname");
 var age = document.getElementById("age");
 var email = document.getElementById("email");
 var phoneno = document.getElementById("phone_no");
 var submitBtn = document.getElementById("submit-btn");
-
 
 var firstName2 = document.getElementById("fname2");
 var lastName2 = document.getElementById("lname2");
@@ -39,6 +40,7 @@ firstName2.addEventListener('input', validateFirstName2)
 lastName2.addEventListener('input', validateLastName2)
 age2.addEventListener('input', validateAge2)
 
+//Function to release the button only on getting all the inputs.
 function buttonRelease() {
     console.log(inputValidator);
     var result = inputValidator.firstn === true && inputValidator.lastn === true && inputValidator.ageperson === true && inputValidator.emailid === true && inputValidator.phonenumber === true;
@@ -64,6 +66,7 @@ function buttonRelease() {
     }
 }
 
+//Function to validate first name.
 function validateFirstName() {
     console.log(firstName.value);
     if (name_regex.test(firstName.value)) {
@@ -77,6 +80,7 @@ function validateFirstName() {
     }
 }
 
+//Function to validate last name.
 function validateLastName() {
     console.log(lastName.value);
     if (name_regex.test(lastName.value)) {
@@ -90,6 +94,7 @@ function validateLastName() {
     }
 }
 
+//Function to validate age.
 function validateAge() {
     console.log(age.value);
     if (age_regex.test(age.value)) {
@@ -104,7 +109,7 @@ function validateAge() {
     }
 }
 
-
+//Function to validate first name of passenger2.
 function validateFirstName2() {
     console.log(firstName2.value);
     if (name_regex.test(firstName2.value)) {
@@ -117,7 +122,8 @@ function validateFirstName2() {
         inputValidator.firstn2 = false;
     }
 }
-    
+
+//Function to validate last name of passenger2.
 function validateLastName2() {
     console.log(lastName2.value);
     if (name_regex.test(lastName2.value)) {
@@ -130,7 +136,8 @@ function validateLastName2() {
         inputValidator.lastn2 = false;
     }
 }
-    
+
+//Function to validate age of passenger2.
 function validateAge2() {
     console.log(age2.value);
     if (age_regex.test(age2.value)) {
@@ -145,6 +152,7 @@ function validateAge2() {
     }
 }
 
+//Function to validate email.
 function validateEmail() {
     console.log(email.value);
     if (email_regex.test(email.value)) {
@@ -158,6 +166,7 @@ function validateEmail() {
     }
 }
 
+//Function to validate phone no.
 function validatePhoneNo() {
     console.log(phoneno.value);
     if (phone_regex.test(phoneno.value)) {
@@ -171,12 +180,14 @@ function validatePhoneNo() {
     }
 }
 
-function valid(element){
+//Setting the border color to green on recieving valid input.
+function valid(element) {
     element.style.borderColor = "green";
     element.style.borderWidth = "thin thick";
 }
 
-function invalid(element){
+//Setting the border color to red on recieving invalid input.
+function invalid(element) {
     element.style.borderColor = "red";
     element.style.borderWidth = "thin thick";
 }

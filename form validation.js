@@ -12,9 +12,9 @@ var lastName2 = document.getElementById("lname2");
 var age2 = document.getElementById("age2");
 var submitBtn2 = document.getElementById("addpass4");
 
-var name_regex = /^[a-z A-Z]{0,20}$/;
+var name_regex = /^[a-z A-Z]{1,20}$/;
 var age_regex = /^0?1[89]|0?[2-9][0-9]$/;
-var email_regex = /\S+@\S+\.\S+/;
+var email_regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.com$/;      
 var phone_regex = /^[0-9]{10}$/;
 
 submitBtn.disabled = "true";
@@ -31,6 +31,7 @@ let inputValidator = {
     "ageperson2": false
 };
 
+//Creating the Event Listeners
 firstName.addEventListener('input', validateFirstName)
 lastName.addEventListener('input', validateLastName)
 age.addEventListener('input', validateAge)
@@ -97,7 +98,7 @@ function validateLastName() {
 //Function to validate age.
 function validateAge() {
     console.log(age.value);
-    if (age_regex.test(age.value)) {
+    if (age.value >= 18 && age.value <= 999) {
         valid(age);
         inputValidator.ageperson = true;
         buttonRelease();
@@ -140,7 +141,7 @@ function validateLastName2() {
 //Function to validate age of passenger2.
 function validateAge2() {
     console.log(age2.value);
-    if (age_regex.test(age2.value)) {
+    if (age2.value >= 18 && age2.value <= 999) {
         valid(age2);
         inputValidator.ageperson2 = true;
         buttonRelease();
